@@ -1,0 +1,26 @@
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  main {
+    flex-direction: column;
+  }
+
+  #reader {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    flex-direction: column;
+  }
+
+  #reader {
+    width: 100%;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  #result {
+    flex-direction: column;
+  }
+}
