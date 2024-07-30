@@ -1,26 +1,52 @@
 @media screen and (min-width: 320px) and (max-width: 375px) {
-  main {
-    flex-direction: column;
-  }
-
-  #reader {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  main {
-    flex-direction: column;
-  }
-
-  #reader {
-    width: 100%;
-  }
-  .card {
-    display: flex;
+  /* main {
     flex-direction: column;
   }
   #result {
+    display: flex;
+    width: 100%;
     flex-direction: column;
   }
+  #reader {
+    width: 100%;
+  }
+
+  .card {
+    margin-top: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .card p {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .card .anchorResult {
+    width: 10%;
+  } */
+}
+
+@media screen and (max-width: 576px) {
+  /* #reader {
+    width: 100%;
+  }
+
+  .card {
+    margin-top: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  #result .card p {
+    font-size: 15px;
+    width: 100%;
+  }
+  #result .card .anchorResult {
+    width: 10%;
+  } */
 }

@@ -10,16 +10,26 @@ const scanner = new Html5QrcodeScanner("reader", {
 scanner.render(success, error);
 // Starts scanner
 
+function copyText(result) {
+  navigator.clipboard.writeText(result);
+  alert("Copied to clipboard", result);
+}
+
 function success(result) {
+  let newResult =
+    result.length === 60
+      ? result.toString().slice(0, 60).concat("/...")
+      : result;
+  console.log(newResult);
   document.getElementById("result").innerHTML = /*html*/ `
-  <div class="card"> 
+  <div class="card">
         <h2>Success!</h2>
-        <p>
-          <a href="${result}" target="_blank">${result}</a>
-        </p>
-        <a href="/">
-          <button class="btn">Back</button>
-        </a> 
+        <p class="anchorResult">
+      <a  href="${result}" target="_blank">${result}</a>
+      </p>
+
+        <button class="btn-copy" onclick="copyText('${result}')">Copy</button>
+        <a href="/"><button class="btn">Back</button></a> 
   </div>
         `;
   // Prints result as a link inside result element
